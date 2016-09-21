@@ -2,7 +2,6 @@ require 'nn'
 require 'cunn'
 require 'cudnn'
 require 'models/DenseLayer'
--- require 'TransitionLayer'
 
 local function createModel(opt)
     if (opt.depth - 4 ) % 3 ~= 0 then
