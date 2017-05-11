@@ -2,7 +2,7 @@
 
 This implements the DenseNet architecture introduced in [Densely Connected Convolutional Network](http://arxiv.org/abs/1608.06993).The original Torch implementation can be found at https://github.com/liuzhuang13/DenseNet, and please find more details about DenseNet there. The only difference here is that we write a customed container "DenseLayer.lua" to implement the dense connections in a more memory efficient way. This leads to **~25% reduction** in memory consumption during training, while keeps the accuracy and training time the same. 
 
-##Usage 
+## Usage 
 0. Install Torch ResNet (https://github.com/facebook/fb.resnet.torch) following the instructions there. To reduce memory consumption, we recommend to install the [optnet](https://github.com/fmassa/optimize-net) package. 
 1. Add the files ```densenet_lite.lua``` and ```DenseLayer.lua``` to the folder models/;
 2. Insert ```require 'models/DenseLayer``` at Line.89 of ```models/init.lua```, if you need to use multiple GPUs;
